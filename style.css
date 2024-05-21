@@ -36,7 +36,7 @@ header{
     color: black;
 }
 header h1{
-    font-size: 52px;
+    font-size: 3rem;
 }
 header p{
     font-family: 18px;
@@ -55,7 +55,7 @@ span{
 }
 h2{
     color: black;
-    font-size: 48px;
+    font-size: 2rem;
     text-align: center;
     margin: 90px auto 20px auto;
 }
@@ -71,7 +71,10 @@ section{
 }
 #galeria{
     background-color: var(--green);
-    background-size: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 #one, #two, #trhee, #four{
@@ -84,4 +87,68 @@ section{
 }
 img{
     margin-bottom: 20px;
+}
+
+#content{
+    display: flex;
+    align-items: center;
+}
+#formulario p, header p{
+    text-align: start;
+}
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+.slider input {
+    display: none;
+}
+.slider label {
+    background-color: var(--blue);
+    border-radius: 100px;
+    bottom: 20px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }

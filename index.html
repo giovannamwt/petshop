@@ -8,24 +8,32 @@
     <link rel="stylesheet" href="./style.css">
     <title>Petshop</title>
 </head>
-<body class="container">
-    <nav>
-        <img src="/images/logo-menu.png" alt="">
-        <ul  class="row align-items-start">
-            <li class="col"><a href="#">Inicio</a></li>
-            <li class="col"><a href="#">Serviços</a></li>
-            <li class="col"><a href="#">Galeria</a></li>
-            <li class="col"><a href="#">Contatos</a></li>
-        </ul>
-    </nav>
-    <header>
-        <div id="content1">
-            <h1>Bem-vindo ao petshop <span>Melhor Amigo!</span></h1>
-            <p>Aqui oferecemos cuidados e serviços de qualidade para garantir a felicidade e saúde do seu animalzinho, reconhecendo-o como parte especial da família.</p>
-            <button class="btn btn-primary ">Saiba Mais</button>
-         </div>
-        <img src="/images/dog-hero.png" alt="">
-    </header>
+<body >
+    <main>
+        <div id="bg1">
+            <nav class="container">
+                <img src="/images/logo-menu.png" alt="">
+                <ul  class="row align-items-start">
+                    <li class="col"><a href="#">Inicio</a></li>
+                    <li class="col"><a href="#serviços">Serviços</a></li>
+                    <li class="col"><a href="#galeria">Galeria</a></li>
+                    <li class="col"><a href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header >
+            <div id="header-org">
+            <div id="content1" >
+                <h1>Bem-vindo ao petshop <span>Melhor Amigo!</span></h1>
+                <p id="texto1">Aqui oferecemos cuidados e serviços de qualidade para garantir a felicidade e saúde do seu animalzinho, reconhecendo-o como parte especial da família.</p>
+                <button onclick="textoheader()">Saiba Mais</button>
+             </div>
+            <img src="/images/dog-hero.png" alt="Dog" id="dog">
+        </div>
+        </header>
+
+
     <section  id="serviços">
         <h2>Conheça nossos serviços e produtos!</h2>
         <p>Esses são apenas alguns dos produtos disponíveis no Petshop "Melhor Amigo".</p>
@@ -33,48 +41,42 @@
             <div class="col" id="one">
                 <img src="/images/4.png" alt="">
                 <p>Rações premium para cães e gatos, com ingredientes de alta qualidade para nutrição balanceada. </p>
-                <button class="btn btn-primary ">Saiba Mais</button>
             </div>
             <div class="col" id="two">
                 <img src="/images/7.png" alt="">
                 <p>Serviços de tosa para cães de todas as raças, com tosadores experientes e técnicas avançadas.</p>
-                <button class="btn btn-primary ">Saiba Mais</button>
             </div>
             <div class="col" id="trhee">
                 <img src="/images/3.png" alt="">
                 <p>Oferecemos diversidade de brinquedos para enriquecer a vida do seu pet, estimulando tanto sua mente quanto seu corpo.</p>
-                <button class="btn btn-primary ">Saiba Mais</button>
             </div>
             <div class="col" id="four">
                 <img src="/images/5.png" alt="">
                 <p>Nossos profissionais garantem uma limpeza profunda e refrescante em ambiente tranquilo e seguro, para cães e gatos.</p>
-                <button class="btn btn-primary ">Saiba Mais</button>
             </div>
 
         </div>
 
     </section>
-    <section id="galeria">
-        <h2>Galeria</h2>
-        <p>Nossa galeria de fotos é o reflexo do nosso amor e cuidado pelos animais. Lá,  você poderá ver alguns dos adoráveis clientes que já passaram pelo nosso  petshop. É um verdadeiro prazer atender a cada um deles e contribuir para o  seu bem-estar e felicidade.</p>
 
-        <ul class="slider">
-            <li>
-                  <input type="radio" id="slide1" name="slide" checked>
-                  <label for="slide1"></label>
-                  <img src="/images/slide1.png" />
-            </li>
-            <li>
-                  <input type="radio" id="slide2" name="slide">
-                  <label for="slide2"></label>
-                  <img src="/images/slide2.png" />
-            </li>
-            <li>
-                  <input type="radio" id="slide3" name="slide">
-                  <label for="slide3"></label>
-                  <img src="/images/slide3.png" />
-            </li>
-        </ul>
+    <section id="galeria">
+        <div id="content-galeria" >
+            <h2>Galeria</h2>
+            <p>Nossa galeria de fotos é o reflexo do nosso amor e cuidado pelos animais. Lá,  você poderá ver alguns dos adoráveis clientes que já passaram pelo nosso  petshop. É um verdadeiro prazer atender a cada um deles e contribuir para o  seu bem-estar e felicidade.</p>
+            <img src="/images/pet1.jpg" id="destaque"/>
+
+            <ul class="slider">
+                <li onclick="foto1()"><img src="/images/mini (1).png" alt="" id="mini"></li>
+                <li onclick="foto2()"><img src="/images/mini (2).png" alt="" id="mini"></li>
+                <li onclick="foto3()"><img src="/images/mini (3).png" alt="" id="mini"></li>
+                <li onclick="foto4()"><img src="/images/mini (4).png" alt="" id="mini"></li>
+                <li onclick="foto5()"><img src="/images/mini (5).png" alt="" id="mini"></li>
+            </ul>
+
+
+            
+        </div>
+ 
     </section>
     <section id="contatos">
         <h2>Estamos ansiosos para conhecê-lo e ao seu melhor amigo! </h2>
@@ -85,11 +87,11 @@
             <div id="formulario">
             <p >Visite-nos no  Petshop "Melhor Amigo" e descubra a diferença que fazemos na vida dos  animais de estimação. Entre em contato conosco por telefone, e-mail ou através  do nosso formulário de contato no nosso site. </p>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label  for="exampleFormControlInput1" class="form-label">Seu email:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
                 </div>
                 <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <button class="btn btn-primary"> Enviar</button>
             </div>
@@ -99,11 +101,32 @@
 
         </div>
         
-
     </section>
+</main>
     <footer>
+        <h3>©2024 Developer by Giovanna Rodrigues</h3>
 
     </footer>
-    
+</main>
+    <script>
+        function foto1(){
+            document.getElementById('destaque').src= "/images/pet1.jpg"
+        }
+        function foto2(){
+            document.getElementById('destaque').src= "/images/pet2.jpg"
+        }
+        function foto3(){
+            document.getElementById('destaque').src= "/images/pet3.jpg"
+        }
+        function foto4(){
+            document.getElementById('destaque').src= "/images/pet4.jpeg"
+        }
+        function foto5(){
+            document.getElementById('destaque').src= "/images/pet5.jpeg"
+        }
+
+
+
+    </script>
 </body>
 </html>
